@@ -3,7 +3,7 @@
 import Loader from 'react-loader-spinner';
 import s from './Loader.module.css';
 
-function Loading() {
+const Loading = () => {
   return (
     <div className={s.loader}>
       <Loader
@@ -15,6 +15,6 @@ function Loading() {
       />
     </div>
   );
-}
+};
 
 export default Loading;

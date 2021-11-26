@@ -1,9 +1,17 @@
+import Navigation from './components/Navigation';
 import Container from 'components/Container';
+
 // import Loader from 'components/Loader';
+
 import './App.css';
 
 function App() {
-  return <Container title=""></Container>;
+  return (
+    <>
+      <Navigation />
+      <Container title=""></Container>
+    </>
+  );
 }
 
 export default App;
