@@ -1,15 +1,22 @@
+import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Container from 'components/Container';
+import HomePage from './views/HomePage';
+import MoviesPage from './views/MoviesPage';
 
 // import Loader from 'components/Loader';
-
 import './App.css';
 
 function App() {
   return (
     <>
       <Navigation />
-      <Container title=""></Container>
+      <Container title="">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesPage />} />
+        </Routes>
+      </Container>
     </>
   );
 }
