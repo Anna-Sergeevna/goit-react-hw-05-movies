@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as fetchMovieAPI from '../../services/movieApi';
-// import {IMG_BASE_URL} from ''
+// import { IMG_BASE_URL } from '../../services/movieApi';
 import s from './HomePage.module.css';
 
 function HomePage() {
@@ -15,14 +15,15 @@ function HomePage() {
       <h2 className={s.title}>Trending today</h2>
 
       {movies && (
-        <ul>
+        <ul className={s.gallery}>
           {movies.map(movie => (
-            <li key={movie.id}>
+            <li className={s.item} key={movie.id}>
               <img
-                src={`${fetchMovieAPI.IMG_BASE_URL}${movie.poster_path}`}
+                className={s.image}
+                src={`${fetchMovieAPI.URL.IMAGE}${movie.poster_path}`}
                 alt={movie.title || movie.name}
               ></img>
-              {movie.title || movie.name}
+              <h3 className={s.titleMovie}>{movie.title || movie.name}</h3>
             </li>
           ))}
         </ul>
