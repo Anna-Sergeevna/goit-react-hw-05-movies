@@ -28,7 +28,6 @@ function SearchForm({ onSubmit }) {
 
   return (
     <form className={s.searchForm} onSubmit={handleSubmit}>
-      {/* // <form className={s.searchForm}> */}
       <input
         className={s.searchFormInput}
         type="text"
@@ -40,7 +39,6 @@ function SearchForm({ onSubmit }) {
       />
 
       <button type="submit" disabled={!query} className={s.searchFormButton}>
-        {/* <button type="submit" className={s.searchFormButton}> */}
         <span className={s.searchFormButtonLabel}>Search</span>
       </button>
     </form>

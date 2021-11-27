@@ -13,7 +13,7 @@ function App() {
       <Navigation />
       <Container title="">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/*" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
         </Routes>
       </Container>
