@@ -1,8 +1,4 @@
-export const URL = {
-  BASE_URL: `https://api.themoviedb.org/3/`,
-  KEY: `c2855cd9e1605af870984c1963f9b27b`,
-  IMAGE: `https://image.tmdb.org/t/p/w342/`,
-};
+import { URL } from './settings-url';
 
 async function fetchWithErrorHandling(url = '', config = {}) {
   const response = await fetch(url, config);
@@ -14,6 +10,12 @@ async function fetchWithErrorHandling(url = '', config = {}) {
 export function fetchPopular() {
   return fetchWithErrorHandling(
     `${URL.BASE_URL}trending/all/day?api_key=${URL.KEY}`,
+  );
+}
+
+export function fetchMovieById({ movieId }) {
+  return fetchWithErrorHandling(
+    `${URL.BASE_URL}movie/${movieId}?api_key=${URL.KEY}&language=en-US`,
   );
 }
 

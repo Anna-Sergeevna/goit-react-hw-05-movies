@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Container from 'components/Container';
 import HomePage from './views/HomePage';
 import MoviesPage from './views/MoviesPage';
+import MovieDetailsPage from './views/MovieDetailsPage';
 
 // import Loader from 'components/Loader';
 import './App.css';
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/*" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
         </Routes>
       </Container>
     </>
