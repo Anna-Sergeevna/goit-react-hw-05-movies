@@ -55,6 +55,7 @@ function MovieDetailsPage() {
           Reviews
         </NavLink>
       </div>
+      <hr />
       <Outlet />
     </>
   );
