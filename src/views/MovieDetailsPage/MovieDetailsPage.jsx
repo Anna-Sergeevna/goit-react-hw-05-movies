@@ -3,7 +3,7 @@
 // import s from './MovieDetailsPage';
 
 function MovieDetailsPage() {
-  return <h1>Hello</h1>;
+  return <h4>Additional information</h4>;
 }
 
 export default MovieDetailsPage;
