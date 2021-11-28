@@ -13,7 +13,7 @@ export function fetchPopular() {
   );
 }
 
-export function fetchMovieById({ movieId }) {
+export function fetchMovieById(movieId) {
   return fetchWithErrorHandling(
     `${URL.BASE_URL}movie/${movieId}?api_key=${URL.KEY}&language=en-US`,
   );

@@ -1,0 +1,17 @@
+.movieCard {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.description {
+  padding-left: 25px;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+.info {
+  padding-bottom: 20px;
+}

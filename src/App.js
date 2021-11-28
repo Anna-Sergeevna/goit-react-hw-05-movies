@@ -5,7 +5,6 @@ import HomePage from './views/HomePage';
 import MoviesPage from './views/MoviesPage';
 import MovieDetailsPage from './views/MovieDetailsPage';
 
-// import Loader from 'components/Loader';
 import './App.css';
 
 function App() {
