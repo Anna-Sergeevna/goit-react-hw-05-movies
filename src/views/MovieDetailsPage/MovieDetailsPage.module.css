@@ -15,3 +15,27 @@
 .info {
   padding-bottom: 20px;
 }
+
+.link {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #2c2c2c;
+}
+
+.link:not(:last-child) {
+  margin-right: 40px;
+}
+
+.activeLink {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #ff6b08;
+}
+
+.activeLink:not(:last-child) {
+  margin-right: 40px;
+}

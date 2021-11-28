@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams, Outlet } from 'react-router-dom';
 
 import * as fetchMovieAPI from '../../services/movieApi';
 import { URL } from '../../services/settings-url';
@@ -38,7 +38,24 @@ function MovieDetailsPage() {
           </div>
         </>
       )}
-      <h4>Additional information</h4>
+      <hr />
+      <h3>Additional information</h3>
+      <div>
+        <NavLink
+          to="cast"
+          className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+        >
+          Cast
+        </NavLink>
+
+        <NavLink
+          to="reviews"
+          className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+        >
+          Reviews
+        </NavLink>
+      </div>
+      <Outlet />
     </>
   );
 }
