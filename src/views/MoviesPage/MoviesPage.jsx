@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import SearchForm from '../../components/SearchForm';
 import Gallery from '../../components/Gallery/Gallery';
 import { Status } from '../../utils/status';
-import SearchIdleView from 'components/SearchIdleView/SearchIdleView';
+import IdleView from 'components/IdleView/IdleView';
 import ErrorView from 'components/ErrorView/ErrorView';
 import Loading from 'components/Loader/Loader';
 
@@ -44,7 +44,7 @@ function MoviesPage() {
     return (
       <>
         <SearchForm onSubmit={onSubmit} />;
-        <SearchIdleView />;
+        <IdleView />;
       </>
     );
   }
