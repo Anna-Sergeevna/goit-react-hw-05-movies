@@ -29,10 +29,6 @@ function Reviews() {
       });
   }, [movieId]);
 
-  if (reviews.length === 0) {
-    return <p>We don't have any reviews for this movie.</p>;
-  }
-
   if (status === Status.IDLE) {
     return (
       <>
@@ -43,6 +39,10 @@ function Reviews() {
 
   if (status === Status.PENDING) {
     return <Loading />;
+  }
+
+  if (reviews.length === 0) {
+    return <p>We don't have any reviews for this movie.</p>;
   }
 
   if (status === Status.RESOLVED) {
