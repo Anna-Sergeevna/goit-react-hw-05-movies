@@ -8,8 +8,21 @@
   padding-left: 25px;
 }
 
+.titleMovie {
+  padding-bottom: 20px;
+}
 .title {
   padding-bottom: 10px;
+}
+
+.infoItem {
+  display: inline-flex;
+  padding-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.infoItem:not(:last-child) {
+  margin-right: 10px;
 }
 
 .info {
