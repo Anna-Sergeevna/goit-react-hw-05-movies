@@ -29,7 +29,9 @@ function MovieDetailsPage() {
               alt={movie.title || movie.name}
             />
             <div className={s.description}>
-              <h2 className={s.titleMovie}>{movie.title || movie.name}</h2>
+              <h2 className={s.titleMovie}>
+                {movie.title || movie.name} ({movie.release_date.slice(0, 4)})
+              </h2>
               <h3 className={s.title}>Genres</h3>
               <ul>
                 {movie.genres.map(({ id, name }) => (
@@ -78,5 +80,3 @@ export default MovieDetailsPage;
 // data => setMovie(data);
 
 // const [movie, setMovie] = useState({});
-
-// ({movie.release_date.slice(0, 4)})
