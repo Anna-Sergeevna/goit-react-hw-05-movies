@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import SearchForm from '../../components/SearchForm';
 import Gallery from '../../components/Gallery/Gallery';
+
+import * as fetchMovieAPI from '../../services/movieApi';
+
 import { Status } from '../../utils/status';
 import IdleView from 'components/IdleView/IdleView';
 import ErrorView from 'components/ErrorView/ErrorView';
 import Loading from 'components/Loader/Loader';
-
-import * as fetchMovieAPI from '../../services/movieApi';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
