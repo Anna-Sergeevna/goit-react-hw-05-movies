@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
-import { NavLink, useParams, Outlet } from 'react-router-dom';
+import {
+  NavLink,
+  useParams,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 
 import * as fetchMovieAPI from '../../services/movieApi';
 import { URL } from '../../services/settings-url';
@@ -16,6 +22,8 @@ function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [status, setStatus] = useState(Status.IDLE);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setStatus(Status.PENDING);
@@ -43,11 +51,18 @@ function MovieDetailsPage() {
     return <Loading />;
   }
 
+  const onGoBack = () => {
+    navigate(location?.state?.from ?? '/');
+  };
+
   if (status === Status.RESOLVED) {
     return (
       <>
         {movie && (
           <>
+            <button className={s.button} type="button" onClick={onGoBack}>
+              Go back
+            </button>
             <div className={s.movieCard}>
               <img
                 src={
@@ -112,5 +127,3 @@ function MovieDetailsPage() {
 export default MovieDetailsPage;
 
 // .then(setMovie) = data => setMovie(data);
-
-// const [movie, setMovie] = useState({});

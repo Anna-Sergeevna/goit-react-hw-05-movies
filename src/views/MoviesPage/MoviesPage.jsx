@@ -44,8 +44,8 @@ function MoviesPage() {
   if (status === Status.IDLE) {
     return (
       <>
-        <SearchForm onSubmit={onSubmit} />;
-        <IdleView />;
+        <SearchForm onSubmit={onSubmit} />
+        <IdleView />
       </>
     );
   }

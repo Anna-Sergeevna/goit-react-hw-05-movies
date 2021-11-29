@@ -9,7 +9,7 @@ async function fetchWithErrorHandling(url = '', config = {}) {
 
 export function fetchPopular() {
   return fetchWithErrorHandling(
-    `${URL.BASE_URL}trending/all/day?api_key=${URL.KEY}`,
+    `${URL.BASE_URL}trending/movie/day?api_key=${URL.KEY}`,
   );
 }
 
