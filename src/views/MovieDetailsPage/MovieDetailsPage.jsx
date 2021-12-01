@@ -40,11 +40,7 @@ function MovieDetailsPage() {
   }, [movieId]);
 
   if (status === Status.IDLE) {
-    return (
-      <>
-        <IdleView />;
-      </>
-    );
+    return <IdleView />;
   }
 
   if (status === Status.PENDING) {
