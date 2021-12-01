@@ -18,14 +18,6 @@
 }
 
 .activeLink {
-  display: inline-block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 30px;
-  font-weight: 500;
+  composes: link;
   color: #ff6b08;
-}
-
-.activeLink:not(:last-child) {
-  margin-right: 40px;
 }
